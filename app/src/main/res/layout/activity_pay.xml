@@ -1,0 +1,508 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:id="@+id/pay">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@drawable/paybackground">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@color/pay_bacground"
+            android:layout_weight="1"
+            android:layout_margin="1dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/aim_username"
+                android:textColor="@color/white"
+                android:layout_centerInParent="true"
+                android:textSize="14sp"/>
+        </RelativeLayout>
+        <EditText
+            android:id="@+id/edt_username"
+            android:layout_marginLeft="3dp"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:hint="请输入交易用户名"
+            android:layout_weight="8"
+            android:textSize="14sp"
+            android:layout_gravity="center_vertical"
+            android:background="@null"
+            android:maxLength="16"/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginRight="5dp">
+            <ImageView
+            android:id="@+id/sao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/sao1" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="扫一扫"
+                android:textSize="10sp"
+                android:textColor="#E8B979"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linear_username"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@drawable/paybackground"
+        android:layout_marginTop="8dp"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="2dp"
+            android:layout_weight="1">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="用户名"
+                android:textSize="14sp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="30dp"/>
+            <TextView
+                android:id="@+id/username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="135*****671"
+                android:textSize="14sp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linear_phone"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@drawable/paybackground"
+        android:layout_marginTop="8dp"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="2dp"
+            android:layout_weight="1">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="    电话"
+                android:textSize="14sp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="30dp"/>
+            <TextView
+                android:id="@+id/phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="135*****671"
+                android:textSize="14sp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@drawable/paybackground"
+        android:layout_marginTop="8dp">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@color/pay_bacground"
+            android:layout_weight="1"
+            android:layout_margin="1dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="   选择币种"
+                android:textColor="@color/white"
+                android:layout_centerInParent="true"
+                android:textSize="14sp"/>
+        </RelativeLayout>
+        <TextView
+            android:id="@+id/select_type"
+            android:layout_marginLeft="3dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="点击选择币种"
+            android:layout_weight="10"
+            android:textSize="14sp"
+            android:layout_gravity="center_vertical" />
+    </LinearLayout>
+
+        <com.yda.yiyunchain.widget.ListViewForScrollView
+            android:id="@+id/listview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="80dp"
+            android:visibility="gone"
+            android:dividerHeight="2dp"
+            android:divider="#fff">
+
+        </com.yda.yiyunchain.widget.ListViewForScrollView>
+            <RelativeLayout
+                android:id="@+id/relative_escc"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@drawable/paybackground"
+                android:layout_marginTop="8dp"
+                android:layout_marginLeft="80dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ESCC"
+                    android:textSize="14sp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="7dp"/>
+
+                <ImageView
+                    android:id="@+id/img_escc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/sel_nor"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/dp_10"/>
+
+            </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/relative_usd"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@drawable/paybackground"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="80dp"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="USD"
+                android:textSize="14sp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="7dp"/>
+
+            <ImageView
+                android:id="@+id/img_usd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/sel_nor"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/dp_10"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/relative_usdt"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@drawable/paybackground"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="80dp"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="USDT"
+                android:textSize="14sp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="7dp"/>
+
+            <ImageView
+                android:id="@+id/img_usdt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/sel_nor"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/dp_10"/>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@drawable/paybackground"
+            android:layout_marginTop="8dp">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@color/pay_bacground"
+                android:layout_weight="1"
+                android:layout_margin="1dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="   转账数量"
+                    android:textColor="@color/white"
+                    android:layout_centerInParent="true"
+                    android:textSize="14sp"
+                    />
+            </RelativeLayout>
+            <EditText
+                android:id="@+id/edt_sellnum"
+                android:layout_marginLeft="3dp"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:hint="请输入交易数量"
+                android:layout_weight="8"
+                android:textSize="14sp"
+                android:layout_gravity="center_vertical"
+                android:background="@null"
+                android:maxLength="16"
+                android:inputType="number"/>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/linear_money"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="15dp">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_error_black_24dp"
+                android:layout_marginRight="5dp"/>
+            <TextView
+                android:id="@+id/tv_money"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="可用余额：00"
+                android:textSize="13sp"
+                />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@drawable/paybackground"
+            android:layout_marginTop="8dp">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@color/pay_bacground"
+                android:layout_weight="1"
+                android:layout_margin="1dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="手续费"
+                    android:textColor="@color/white"
+                    android:layout_centerInParent="true"
+                    android:textSize="14sp"
+                    android:paddingLeft="20dp"/>
+            </RelativeLayout>
+            <TextView
+                android:id="@+id/need_money"
+                android:layout_marginLeft="3dp"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="8"
+                android:textSize="14sp"
+                android:layout_gravity="center_vertical"
+                android:background="@null" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@drawable/paybackground"
+            android:layout_marginTop="8dp">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@color/pay_bacground"
+                android:layout_weight="1"
+                android:layout_margin="1dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="  合计扣款"
+                    android:textColor="@color/white"
+                    android:layout_centerInParent="true"
+                    android:textSize="14sp"
+                    />
+            </RelativeLayout>
+            <TextView
+                android:id="@+id/receive_money"
+                android:layout_marginLeft="3dp"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:hint="实际扣款金额"
+                android:layout_weight="8"
+                android:textSize="14sp"
+                android:layout_gravity="center_vertical"
+                android:background="@null" />
+        </LinearLayout>
+        <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="45dp"-->
+            <!--android:background="@drawable/paybackground"-->
+            <!--android:layout_marginTop="8dp">-->
+
+            <!--<RelativeLayout-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:background="@color/pay_bacground"-->
+                <!--android:layout_weight="1"-->
+                <!--android:layout_margin="1dp">-->
+                <!--<TextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text="  支付密码"-->
+                    <!--android:textColor="@color/white"-->
+                    <!--android:layout_centerInParent="true"-->
+                    <!--android:textSize="14sp"-->
+                    <!--/>-->
+            <!--</RelativeLayout>-->
+            <!--<com.jungly.gridpasswordview.GridPasswordView-->
+                <!--android:id="@+id/password"-->
+                <!--android:layout_marginLeft="3dp"-->
+                <!--android:layout_width="100dp"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:hint="输入交易密码"-->
+                <!--android:layout_weight="8"-->
+                <!--android:textSize="14sp"-->
+                <!--android:layout_gravity="center_vertical"-->
+                <!--android:background="@null"-->
+                <!--android:maxLength="6"-->
+                <!--android:inputType="textPassword"/>-->
+        <!--</LinearLayout>-->
+
+        <LinearLayout
+            android:id="@+id/linear_tu"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@drawable/paybackground"
+            android:layout_marginTop="8dp"
+            android:visibility="gone">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@color/pay_bacground"
+                android:layout_weight="1"
+                android:layout_margin="1dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="图形验证码"
+                    android:textColor="@color/white"
+                    android:layout_centerInParent="true"
+                    android:textSize="14sp"/>
+            </RelativeLayout>
+            <EditText
+                android:id="@+id/edt_tu"
+                android:layout_marginLeft="3dp"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:hint="请输入图形验证码"
+                android:layout_weight="4"
+                android:textSize="14sp"
+                android:layout_gravity="center_vertical"
+                android:background="@null"
+                android:maxLength="4"
+                android:text="1234"/>
+            <ImageView
+                android:id="@+id/img_tu"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="3dp"
+                android:layout_gravity="center_vertical"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@drawable/paybackground"
+            android:layout_marginTop="8dp">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@color/pay_bacground"
+                android:layout_weight="1"
+                android:layout_margin="1dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="手机验证码"
+                    android:textColor="@color/white"
+                    android:layout_centerInParent="true"
+                    android:textSize="14sp"/>
+            </RelativeLayout>
+            <EditText
+                android:id="@+id/edt_ma"
+                android:layout_marginLeft="3dp"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:hint="请输入验证码"
+                android:layout_weight="4"
+                android:textSize="14sp"
+                android:layout_gravity="center_vertical"
+                android:background="@null"
+                android:maxLength="16"/>
+                <Button
+                    android:id="@+id/btn_ma"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/receive_ma"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="4dp"
+                    android:background="@drawable/receive_bg"
+                    android:layout_weight="1"
+                    android:textColor="@color/white"/>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/ok"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/receive_bg"
+            android:text="提交"
+            android:textColor="@color/white"/>
+
+</LinearLayout>
+</ScrollView>
